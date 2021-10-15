@@ -1,5 +1,5 @@
 ---
-layout: lecture
+layout: page
 title: The Qt Academy
 ready: true
 ---
