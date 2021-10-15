@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: lecture
 title: The Qt Academy
+ready: true
 ---
 
 The Qt Academy offers you all about how to play with one of the most fanscinating
