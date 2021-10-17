@@ -2,6 +2,7 @@
 layout: lecture
 title: Introduction to Qt
 ready: true
+permalink: /qt-academy/lectures/intro
 ---
 
 
