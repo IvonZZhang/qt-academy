@@ -15,7 +15,7 @@ future: true
 collections:
   'lectures':
     output: true
-    permalink: /qt-academy/:collection/:name
+    permalink: /:collection/:name
 
 # Excludes
 exclude:
