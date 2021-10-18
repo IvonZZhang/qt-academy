@@ -16,6 +16,7 @@ collections:
   'lectures':
     output: true
     permalink: /:collection/:name
+baseurl: https://ivonzzhang.github.io/qt-academy/
 
 # Excludes
 exclude:
