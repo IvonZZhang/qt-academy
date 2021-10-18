@@ -12,6 +12,10 @@ excerpt: '' # work around a bug
       <li>
         {% if lecture.ready %}
           <a href="{{ lecture.url }}">{{ lecture.title }}</a>
+          <br/> title: {{ lecture.title }}
+          <br/> url: {{ lecture.url }}
+          <br/> baseurl: {{ lecture.baseurl }}
+          <br/> permalink: {{ lecture.permalink }}
         {% elsif lecture.noclass %}
           {{ lecture.title }} [no class]
         {% else %}
