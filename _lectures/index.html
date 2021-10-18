@@ -11,7 +11,7 @@ excerpt: '' # work around a bug
     {% if lecture.phony != true %}
       <li>
         {% if lecture.ready %}
-          <a href="{{ lecture.url }}">{{ lecture.title }}</a>
+          <a href="{{ site.baseurl }}{{ lecture.url }}">{{ lecture.title }}</a>
           <br/> title: {{ lecture.title }}
           <br/> url: {{ lecture.url }}
           <br/> baseurl: {{ lecture.baseurl }}
