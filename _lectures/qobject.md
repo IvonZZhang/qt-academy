@@ -16,7 +16,7 @@ The most powerful bit of Qt, is the mechanism to connect objects, called **signa
 
 **Signals/slots** is very useful between the GUI objects and the objects handling the business logic. Each QWidget has a set of pre-defined signals. E.g. QComboBox has a `currentIndexChanged(int index)`, which is emitted whenever the user changes the selected item in the combobox. You could simply define what should be done once an item has been selected in a slot, and connect it with that signal. The business logic is then well defined for GUI interactions. In addition, in case you have noticed, the signal has a parameter `int index`. It's also possible to pass parameters through Signal/slots.
 
-```
+```c++
 # Aforementioned example is as simple as this
 GardenCamera gardenCamera;
 HouseManager houseManager;
