@@ -6,7 +6,7 @@ ready: true
 
 Qt makes C++ more powerful and easier to use, and the way to achieve that is **QObject**.
 
-## Why it's easier to use?
+## Why is it easier to use?
 
 If you browse the documentation of Qt, you'll find out that Qt provides a lot of modules like QtCore, QtNetwork, QtWidget... These modules are sets of classes which you could use as regular C++ classes. For example, in QtCore, there are container classes like QVector, QList, QMap etc. These containers can do what STL containers could do but also with other features e.g. they support both STL-style iterators (with `begin()` and `end()`) and Java-style iterators (with `it.hasNext()` and `it.next()`). There are also classes like QThread, QMutex, QFuture etc. which makes it much easier to do concurrent and asychronous programming in C++ in a safe way.
 
@@ -23,8 +23,23 @@ HouseManager houseManager;
 QObject::connect(&gardenCamera, &GardenCamera::startedRaining, &houseManager, &HouseManager::closeWindows);
 ```
 
-## How it is realized?
+## How is it realized?
 
 The signals/slots mechanism, together with other additional features, are provided via **QObject**. QObject is the base class for almost every Qt provided classes.
 
 As long as a class inherits from QObject, it can have signals and/or slots, and can be used with the connection mechanism. Therefore, if you create a class that inherits QObject, it can be part of the game as well.
+
+```c
+class MyOwnClass : public QObject {
+    Q_OBJECT # This special macro must be here!
+public:
+    MyOwnClass();
+Q_SIGNAL:
+    myFirstSignal();
+public Q_SLOTS:
+    myFirstSlot();
+    mySecondSlot(int param);
+private Q_SLOTS:
+    aSlotThatOnlyICouldUse();
+}
+```
